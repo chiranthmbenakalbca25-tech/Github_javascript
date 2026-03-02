@@ -1,0 +1,30 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Basic HTML + JavaScript</title>
+</head>
+<body>
+    <h1>Welcome!</h1>
+    <p id="greeting"></p>
+
+    <script>
+        // simple JavaScript to manipulate the DOM
+        function greet(name) {
+            return `Hello, ${name}!`;
+        }
+
+        document.getElementById('greeting').textContent = greet('world');
+
+        // basic interaction
+        const button = document.createElement('button');
+        button.textContent = 'Click me';
+        button.addEventListener('click', () => {
+            alert('Button was clicked!');
+        });
+        document.body.appendChild(button);
+    </script>
+</body>
+</html>
